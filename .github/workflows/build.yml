@@ -105,3 +105,14 @@ jobs:
           region: ${{ env.AWS_REGION }}
           deployment_package: deploy.zip         # only use for set the latest versions
           #use_existing_version_if_available: true
+
+  send-message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - uses: teknatha136/actions-google-chat-text-message@main
+        with:
+          google-chat-webhook: https://chat.googleapis.com/v1/spaces/AAAAKMSYkyE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=maQb_cpB9X7RjonmMZDkXYjb_2J2EAX0VBl43nl_3Vk
+          text-message: Hello,\nThis is a test message.\nMessage sent by 
