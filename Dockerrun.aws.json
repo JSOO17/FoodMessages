@@ -1,0 +1,11 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+        "Name": "public.ecr.aws/l4u4k6t2/foodmessaegs:latest"
+    },
+    "Ports": [
+        {
+            "ContainerPort": 7142
+        }
+    ]
+}
