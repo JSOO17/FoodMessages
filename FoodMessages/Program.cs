@@ -12,12 +12,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddHttpsRedirection(options =>
-//{
-//    options.RedirectStatusCode = (int)HttpStatusCode.PermanentRedirect;
-//    options.HttpsPort = 80;
-//});
-
 builder.Services.AddTransient<IMessenger, MessengerTwillio>();
 builder.Services.Configure<ConfigTwillio>(builder.Configuration.GetSection("ConfigTwillio"));
 
